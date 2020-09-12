@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  overall: MyString
+  lifestyle: MyString
+  compensation: MyString
+  mentorship: MyString
+  diversity: MyString
+  interview: MyString
+  interview_comment: MyString
+  tech_eval: MyString
+  language: MyString
+  lifestyle_comment: MyString
+  company_id: MyString
+  user_id: MyString
+
+two:
+  overall: MyString
+  lifestyle: MyString
+  compensation: MyString
+  mentorship: MyString
+  diversity: MyString
+  interview: MyString
+  interview_comment: MyString
+  tech_eval: MyString
+  language: MyString
+  lifestyle_comment: MyString
+  company_id: MyString
+  user_id: MyString
