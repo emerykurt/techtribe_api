@@ -1,11 +1,11 @@
 class RatingsController < ApplicationController
-
+  skip_before_action :verify_authenticity_token
   def create
     rating = Rating.new(rating_params)
     if rating.save
       render json: RatingSerializer.new(rating)
     else
-      render json: {error: 'Review could not be saved'}
+      render json: {error: 'Review could not be saved.'}
     end
   end
 
@@ -34,6 +34,8 @@ class RatingsController < ApplicationController
   private
 
   def rating_params
-      params.require(:rating).permit(:interview, :interview_comment, :tech, :tech_interview, :language, :compensation, :benefits, :diversity, :mentorship, :culture, :culture_comment, :overall, :first_name, :last_name, :bootcamp, :city, :state, :company_id)
+      params.require(:rating).permit(:rTitle, :rInt, :rIntCom, :rTech, :rTechCom, :rLang, :rCompen, :rBenef, :rDivers, :rMentor, :rCult, :rCultcOM, :rOv, :rFName, :rLName, :rBootcamp, :rCity, :rState, :rLinked, :company_id)
   end
 end
+
+ 

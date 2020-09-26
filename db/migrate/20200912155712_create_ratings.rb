@@ -1,23 +1,25 @@
 class CreateRatings < ActiveRecord::Migration[6.0]
   def change
     create_table :ratings do |t|
-      t.string :interview
-      t.string :interview_comment
-      t.string :tech
-      t.string :tech_interview
-      t.string :language
-      t.integer :compensation
-      t.string :benefits
-      t.string :diversity
-      t.string :mentorship
-      t.string :culture
-      t.string :culture_comment
-      t.integer :overall
-      t.string :first_name
-      t.string :last_name
-      t.string :bootcamp
-      t.string :city
-      t.string :state
+      t.string :rTitle
+      t.string :rInt
+      t.string :rIntCom
+      t.string :rTech
+      t.string :rTechCom
+      t.string :rLang
+      t.integer :rCompen
+      t.string :rBenef
+      t.string :rDivers
+      t.string :rMentor
+      t.string :rCult
+      t.string :rCultCom
+      t.integer :rOv
+      t.string :rFName
+      t.string :rLName
+      t.string :rBootcamp
+      t.string :rCity
+      t.string :rState
+      t.string :rLinked
 
 
       t.integer :company_id

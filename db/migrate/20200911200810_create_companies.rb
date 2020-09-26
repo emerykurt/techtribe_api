@@ -4,6 +4,7 @@ class CreateCompanies < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :twitter
       t.string :website
+      t.string :logo
 
 
       t.timestamps

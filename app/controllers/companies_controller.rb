@@ -1,6 +1,12 @@
 class CompaniesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def create
-    @company = Company.create(company_params)
+    company = Company.create(company_params)
+    if company.save
+      render json: CompanySerializer.new(company)
+    else
+      render json: {error: 'Company could not be saved.'}
+    end
   end
 
   def index
@@ -22,7 +28,7 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-      params.require(:company).permit(:name, :twitter, :website, :review_id, :user_id)
+      params.require(:company).permit(:name, :twitter, :website, :logo, :review_id, :user_id)
   end
 
   
